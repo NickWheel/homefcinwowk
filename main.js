@@ -13,23 +13,20 @@
 
 
 let big_img = document.querySelector('.big_img');
-let big_img_src = big_img.src;
+let img_block = document.querySelectorAll('.mini_img');
 
-let img_block = document.querySelectorAll('div');
+    for (let i = 0; i < img_block.length; i++) {
+        let origin_link = big_img.src;
+        img_block[i].addEventListener('mouseover', function() {
+            big_img.src = img_block[i].src;
+        })
+        img_block[i].addEventListener('mouseout', function() {
+            big_img.src = origin_link;
+        })
+    }
 
-let mini_img = document.querySelector(".mini_img");
-let mini_img_src = mini_img.src;
 
-// console.log(big_img_src, mini_img_src);
-for (let i = 0; i < mini_img.length; i++) {
 
-}
-mini_img.addEventListener('mouseover', function () {
-    big_img.src = mini_img_src;
-});
-mini_img.addEventListener('mouseover', function () {
-
-});
 
 
 
